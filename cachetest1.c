@@ -30,7 +30,7 @@ int main (int argc, char *argv[])
   
   /* variables for task 1 */
   unsigned int M = 1000;
-  unsigned int N = 256*1024; 
+  unsigned int N = 524288; 
   unsigned int i, j;
 	
   /* declare variables; examples, adjust for task */

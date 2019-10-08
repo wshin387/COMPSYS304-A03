@@ -29,7 +29,7 @@ int main (int argc, char *argv[])
   
   /* variables for task 2 */
   unsigned int M = 1000;
-  unsigned int N = 256*1024; 
+  unsigned int N = 524288; 
   unsigned int i, j;
 
   
@@ -94,10 +94,10 @@ int main (int argc, char *argv[])
   /* code to be measured goes here */
   /***************************************/
   //repeat the task M times
-    for (i=0; i<M; i++) {
+    for (i = 0; i < M; i++) {
         sum = 0;
 
-        for (j=0; j < N; j++) {
+        for (j = 0; j < N; j++) {
             sum += a[b[j]];
         }
     }
