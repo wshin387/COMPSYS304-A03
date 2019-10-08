@@ -63,15 +63,15 @@ int main (int argc, char *argv[])
     b = malloc(N * sizeof(int));
 
 
-	 /* initialise arrray elements */
+	 /* initialise array elements */
 
     for (i=0; i<N; i++) {
-        b[i] = i;
         a[i] = 0;
+        b[i] = i;
     }
 
 
-
+    //test that sum is correct
      for (i=0; i<50; i++) {
          a[N-1-i] = i;
          sum += i;
@@ -84,8 +84,10 @@ int main (int argc, char *argv[])
   t1 = getTime();
   /* code to be measured goes here */
   /***************************************/
+  //repeat the task M times
 	for (i=0; i<M; i++) {
         sum = 0;
+
         for (j=0; j<N; j++) {
             sum += a[b[j]];
         }
@@ -104,7 +106,6 @@ int main (int argc, char *argv[])
   printf("sum: %d\n", sum);
   
   /* free memory; examples, adjust for task */
-  //free(a);
   free(a);
   free(b);
 

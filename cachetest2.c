@@ -17,7 +17,6 @@ double getTime(){
   return sec;
 }
  
-/* for task 1 only */
 void usage(void)
 {
 	fprintf(stderr, "Usage: cachetest2/2 [--repetitions M] [--array_size N]\n");
@@ -28,7 +27,7 @@ int main (int argc, char *argv[])
 {
   double t1, t2; 
   
-  /* variables for task 1 */
+  /* variables for task 2 */
   unsigned int M = 1000;
   unsigned int N = 256*1024; 
   unsigned int i, j;
@@ -36,11 +35,9 @@ int main (int argc, char *argv[])
   
 	
   /* declare variables; examples, adjust for task */
-	//int *a;
-	//double  a[100];
     int *a, *b, sum;
   
-  /* parameter parsing task 1 */
+  /* parameter parsing task 2 */
   for(i=1; i<(unsigned)argc; i++) {
 	  if (strcmp(argv[i], "--repetitions") == 0) {
 		  i++;
@@ -62,10 +59,11 @@ int main (int argc, char *argv[])
 	 //a = malloc (N * sizeof(int));
     a = malloc(N * sizeof(int));
     b = malloc(N * sizeof(int));
-	 /* initialise arrray elements */
+    
+	 /* initialise array elements */
     for (i=0; i<N; i++) {
-        b[i] = i;
         a[i] = 0;
+        b[i] = i;
     }
 
     sum = 0;
@@ -116,7 +114,6 @@ int main (int argc, char *argv[])
   printf("sum: %d\n", sum);
   
   /* free memory; examples, adjust for task */
-  //free(a);
   free(a);
   free(b);
 
