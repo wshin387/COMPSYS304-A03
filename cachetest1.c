@@ -58,21 +58,20 @@ int main (int argc, char *argv[])
 
     
   /* allocate memory for arrays; examples, adjust for task */
-	 //a = malloc (N * sizeof(int));
     a = malloc(N * sizeof(int));
     b = malloc(N * sizeof(int));
 
 
 	 /* initialise array elements */
 
-    for (i=0; i<N; i++) {
+    for (i = 0; i < N; i++) {
         a[i] = 0;
         b[i] = i;
     }
 
 
     //test that sum is correct
-     for (i=0; i<50; i++) {
+     for (i = 0; i < 50; i++) {
          a[N-1-i] = i;
          sum += i;
      }
@@ -85,10 +84,10 @@ int main (int argc, char *argv[])
   /* code to be measured goes here */
   /***************************************/
   //repeat the task M times
-	for (i=0; i<M; i++) {
+	for (i = 0; i < M; i++) {
         sum = 0;
 
-        for (j=0; j<N; j++) {
+        for (j = 0; j < N; j++) {
             sum += a[b[j]];
         }
     }

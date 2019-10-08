@@ -59,9 +59,9 @@ int main (int argc, char *argv[])
 	 //a = malloc (N * sizeof(int));
     a = malloc(N * sizeof(int));
     b = malloc(N * sizeof(int));
-    
+
 	 /* initialise array elements */
-    for (i=0; i<N; i++) {
+    for (i = 0; i < N; i++) {
         a[i] = 0;
         b[i] = i;
     }
@@ -69,8 +69,8 @@ int main (int argc, char *argv[])
     sum = 0;
     
     //test that sum is correct
-    for (i=0; i<50; i++) {
-        a[N - 1 - i] = i;
+    for (i = 0; i < 50; i++) {
+        a[N-1-i] = i;
         sum += i;
     }
     
@@ -79,10 +79,11 @@ int main (int argc, char *argv[])
     //Shuffle array B 2N times
     srand(time(NULL));
 
-    for (i=0; i<2*N; i++) {
+    for (i = 0; i < 2 * N; i++) {
         int index1 = rand() % N;
         int index2 = rand() % N;
 
+        //make swap
         int temp = b[index1];
         b[index1] = b[index2];
         b[index2] = temp;
