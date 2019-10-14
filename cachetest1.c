@@ -34,8 +34,6 @@ int main (int argc, char *argv[])
   unsigned int i, j;
 	
   /* declare variables; examples, adjust for task */
-	//int *a;
-	//double  a[100];
     int *a, *b, sum;
  
   
